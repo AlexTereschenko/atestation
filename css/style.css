@@ -1,5 +1,6 @@
 * {
     outline: 2px solid red;
+    font-family: 'Rubik', sans-serif;
 }
 
 /* set media */
@@ -31,10 +32,18 @@
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
 
+    .folderContainer .menuToggle {
+        display: block;
+    }
+
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
+    .folderContainer .menuToggle {
+        display: none;
+      }
+
     .section {
         flex-direction: row;
     }
@@ -139,7 +148,7 @@ main {
 }
 
 .btn-underline:hover {
-    filter: brightness(0) saturate(100%) invert(89%) sepia(44%) saturate(584%) hue-rotate(323deg) brightness(100%) contrast(97%);
+    filter: brightness(0) saturate(100%) invert(40%) sepia(40%) saturate(5717%) hue-rotate(340deg) brightness(98%) contrast(97%);
     cursor: pointer;
 }
 
@@ -151,7 +160,7 @@ main {
     height: 2px;
     bottom: -2px;
     left: 0;
-    background-color: #FBD784;
+    background-color: #F53838;
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
 }
@@ -253,12 +262,12 @@ aside {
 {
   box-shadow: 0 0px rgb(158, 157, 157);
   transform: rotate(45deg);
-  background: #FBD784;
+  background: #F53838;
 }
 
 .folderContainer.active .menuToggle::after
 {
   box-shadow: 0 0px rgb(158, 157, 157);
   transform: translateY(0) rotate(-45deg);
-  background: #FBD784;
+  background: #F53838;
 }
