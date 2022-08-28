@@ -875,14 +875,17 @@ b {
 
 .comment-card {
     display: flex;
-    /* width: 440px; */
     min-height: 230px;
     flex-direction: column;
     align-items: center;
     background: #FFFFFF;
-    border: 2px solid #F53838;
+    border: 2px solid #DDDDDD;
     border-radius: 10px;
     padding: 30px;
+}
+
+.comment-card:hover {
+    border: 2px solid #F53838;
 }
 
 .comment-card>div {
@@ -1195,21 +1198,23 @@ b {
 }
 
 .back, .next {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border: 2px solid #F53855;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: background-color 0.5s;
 }
 
-.back:hover .onhover-back, .next:hover .onhover-next {
-    opacity: 1;
-    position: relative;
-    left: -73%;
-    top: -152%;
+.back:hover, .next:hover {
+    background-color: #F53855;
 }
 
-.onhover-back, .onhover-next {
-    position: relative;
-    left: -73%;
-    top: -152%;
-    opacity: 0;
+.back:hover img, .next:hover img {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(18%) hue-rotate(31deg) brightness(105%) contrast(100%);
 }
 
 .owl-carousel .owl-item img {
@@ -1224,31 +1229,20 @@ b {
     width: 24px !important;
 }
 
-
-/* .onhover-back:hover, .onhover-next:hover  {
-    opacity: 1;
-    position: relative;
-} */
-
-/* .back::before {
-    content: "";
-    border:1px solid #f30;
-    position: relative;
-    z-index:100000;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-} */
-
-/* .back:hover::before {
-    content: "";
-    width: 100%;
-    height: 100%;
-    background: #F53838;
-    opacity: 1;
+.owl-theme .owl-nav.disabled + .owl-dots {
+    position: absolute;
+    margin-top: 0 !important;
+    bottom: -90px;
 }
 
-.back:hover {
-    opacity: 0;
-} */
+.owl-theme .owl-dots .owl-dot span {
+    width: 15px !important;
+    height: 15px !important;
+    transition: 0.5s !important;
+    /* background: #DDE0E4 !important; */
+}
+
+.owl-theme .owl-dots .active span {
+    width: 45px !important;
+    background: #F53838 !important;
+}

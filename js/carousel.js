@@ -2,7 +2,8 @@ const owl = $('.slide-two');
 owl.owlCarousel({
         loop: true,
         margin:50,
-        // dots:true,
+        dots:true,
+        dotsEach:true,
         // nav:true,
         startPosition: 1,
         item: 3,
@@ -36,8 +37,6 @@ const owlPrice = $('.slide-one');
 owlPrice.owlCarousel({
         loop: true,
         center: true,
-        // dots:false,
-        // nav:false,
         margin:50,
         startPosition: 1,
         item: 3,
