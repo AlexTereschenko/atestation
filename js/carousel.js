@@ -4,7 +4,6 @@ owl.owlCarousel({
         margin:50,
         dots:true,
         dotsEach:true,
-        // nav:true,
         startPosition: 1,
         item: 3,
         responsive : {

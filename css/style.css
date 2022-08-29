@@ -1,5 +1,4 @@
 * {
-    /* outline: 2px solid red; */
     font-family: 'Rubik', sans-serif !important;
     color: #0B132A;
 }
@@ -8,6 +7,19 @@
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+    .folderContainer {
+        right: 20px;
+        display: flex;
+    }
+
+    .navigation_header {
+        display: none;
+    }
+
+    .sign {
+        display: none;
+    }
+    
     .menu {
         margin: 20px 20px 20px;
     }
@@ -77,10 +89,36 @@
     .card {
         width: 250px;
     }
+
+    .owl-theme .owl-nav.disabled + .owl-dots {
+        bottom: -45.5px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .subscribe {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
+    .folderContainer {
+        display: flex;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .navigation_header {
+        display: none;
+    }
+
+    .sign {
+        display: flex;
+    }
+
     .menu {
         margin: 20px 20px 20px;
     }
@@ -149,6 +187,18 @@
     .card {
         width: 330px;
     }
+
+    .owl-theme .owl-nav.disabled + .owl-dots {
+        bottom: -45.5px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .subscribe {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -216,10 +266,30 @@
         left: 40%;
     }
 
+    .owl-theme .owl-nav.disabled + .owl-dots {
+        bottom: -105.5px;
+        left: 0;
+        transform: translateX(0);
+    }
+
+    .subscribe {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
+    .folderContainer {
+        display: none;
+    }
+
+    .navigation_header {
+        display: flex;
+        gap: 25px;
+    }
+
     .menu {
         margin: 30px 50px 20px;
     }
@@ -280,10 +350,20 @@
     .nav-arr {
         left: 40%;
     }
+
+    .subscribe {
+        flex-direction: row;
+        gap: 0;
+        align-items: center;
+    }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+    .navigation_header {
+        gap: 40px;
+    }
+
     .menu {
         margin: 40px 100px 20px;
     }
@@ -388,11 +468,6 @@
     }
 }
 
-/* model 1920wide */
-@media only screen and (min-width: 1920px) {
-
-}
-
 /* set media end */
 
 
@@ -405,6 +480,7 @@ body {
     flex-direction: column;
     align-items: center;
     width: 100%;
+    max-width: 1440px;
     padding-top: 97px;
     margin: 0 auto;
     overflow-x: hidden;
@@ -447,6 +523,7 @@ header {
     position: fixed;
     top: 0;
     width: 100vw;
+    max-width: 1440px;
     align-items: center;
     background-color: #fff;
     z-index: 100;
@@ -462,10 +539,8 @@ header {
 }
 
 .navigation_header {
-    display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 40px;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -477,9 +552,9 @@ header {
 }
 
 .sign {
-    display: flex;
     flex-direction: row;
     gap: 30px;
+    position: relative;
 }
 
 .sign a {
@@ -490,6 +565,13 @@ header {
 
 .signIn {
     color: #0B132A;
+}
+
+.signUp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .btn-round {
@@ -692,7 +774,6 @@ b {
 #features .container {
     display: flex;
     justify-content: space-between;
-    /* gap: 170px; */
     margin-top: 95px;
     width: 100%;
 }
@@ -861,7 +942,7 @@ b {
 }
 
 #testimonials h2 {
-    margin-top: 50px;
+    max-width: 440px;
     margin-bottom: 20px;
 }
 
@@ -938,7 +1019,6 @@ b {
 .subscribe {
     width: 100%;
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: space-between;
     background: #FFFFFF;
@@ -994,6 +1074,7 @@ b {
     padding-top: 180px;
     position: relative;
     top: -116.5px;
+    padding-bottom: 100px;
 }
 
 .left_wrapper {
@@ -1011,7 +1092,6 @@ b {
     font-size: 16px;
     line-height: 30px;
     color: #4F5665;
-
 }
 
 .social {
@@ -1071,41 +1151,53 @@ b {
     color: #4F5665;
 }
 
-
-
-
-
-
-
-
-
-
-
-
 .folderContainer {
     position: fixed;
     top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
     width: 40px;
     height: 40px;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
     box-shadow: 0 25px 35px rgba(0, 0, 0, 0.2);
-    display: flex;
     justify-content: end;
-    transition: height 0.5s, width 0.5s;
-    transition-delay: 0s, 0.75s;
     overflow: hidden;
 }
 
-.folderContainer.active
+.folderContainer.active {
+    width: auto;
+    height: auto;
+    transform: translateX(0);
+    left: 20px;
+    bottom: 20px;
+    top: 20px;
+    right: 20px;
+    z-index: 10;
+}
+
+.folderContainer.active~.sign
 {
-  width: 200px;
-  height: 196px;
-  transition: height 0.5s, width 0.5s;
-  transition-delay: 0.5s, 0s;
-  z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    right: 50%;
+    top: 50px;
+    z-index: 10;
+    transform: translateX(50%) scale(1.5);
+}
+
+.folderContainer.active~.navigation_header
+{
+    display: flex;
+    flex-direction: column;
+    top: 200px;
+    z-index: 10;
+    gap: 10px;
+}
+
+.folderContainer.active~.navigation_header li a {
+    font-size: 46px;
+    line-height: 120%;
 }
 
 .folderContainer .menuToggle
@@ -1117,6 +1209,7 @@ b {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 10;
 }
 
 .folderContainer .menuToggle::before
@@ -1160,19 +1253,10 @@ b {
     background: linear-gradient(180deg, #F8F8F8 -45.04%, rgba(248, 248, 248, 0) 88.56%);;
 }
 
-
-
-
-
-
-
-
-
 .owl-prev,
 .owl-next {
   position: absolute;
   top: 100%;
-  /* transform: translateY(-50%); */
 }
 
 .owl-prev {
@@ -1232,17 +1316,19 @@ b {
 .owl-theme .owl-nav.disabled + .owl-dots {
     position: absolute;
     margin-top: 0 !important;
-    bottom: -90px;
 }
 
 .owl-theme .owl-dots .owl-dot span {
     width: 15px !important;
     height: 15px !important;
     transition: 0.5s !important;
-    /* background: #DDE0E4 !important; */
 }
 
 .owl-theme .owl-dots .active span {
     width: 45px !important;
     background: #F53838 !important;
+}
+
+.no-scroll {
+    overflow-y: hidden;
 }
