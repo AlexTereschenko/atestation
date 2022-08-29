@@ -929,21 +929,32 @@ b {
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    height: 208px;
+    gap: 10px;
+}
+
+.sponsors a {
+    width: 20%;
+    max-width: 190px;
 }
 
 .sponsors img {
-    width: 20%;
-    max-width: 200px;
-    transition: 0.5s;
+    width: 100%;
+    /* width: 190px; */
+    filter: grayscale(100%);
+    transition: 0.5s ease-in-out;
+    opacity: 0.4;
 }
 
 .sponsors img:hover {
-    filter: brightness(0) saturate(100%) invert(45%) sepia(86%) saturate(2242%) hue-rotate(331deg) brightness(89%) contrast(117%);
+    filter: none;
+    opacity: 1;
 }
 
 #testimonials h2 {
     max-width: 440px;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 #testimonials>p {

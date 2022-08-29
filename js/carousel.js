@@ -42,19 +42,19 @@ owlPrice.owlCarousel({
         responsive : {
             
             0 : {  
-                items: 1.1,
+                items: 1.3,
             },
             360 : {    
                 items: 1.3,
             },
             600 : {
-                items: 1.5,
+                items: 1.6,
             },
             768 : {
-                items: 2,
+                items: 2.3,
             },
             992 : {
-                items: 2,
+                items: 2.6,
             },
             1200 : {
                 items: 3,
