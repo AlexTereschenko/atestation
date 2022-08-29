@@ -1,2 +1,2 @@
 #lvlUP exam
-Simple landing page with some anamations
+Simple landing page with some animations
