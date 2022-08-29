@@ -40,7 +40,7 @@
 
     .info-card {
         width: 100%;
-        padding: 35px 91px;
+        padding: 35px 0;
         justify-content: center;
     }
     
@@ -767,9 +767,13 @@ b {
     justify-content: space-between;
 }
 
-.info-card:not(:first-child) {
-    border-left: 2px solid #EEEFF2;;
+.info-card div p {
+    width: 91px;
 }
+
+/* .info-card:not(:first-child) {
+    border-left: 2px solid #EEEFF2;;
+} */
 
 #features .container {
     display: flex;
@@ -800,6 +804,7 @@ b {
 .feature-list li{
     display: flex;
     gap: 10px;
+    align-items: center;
 }
 
 #pricing h2 {
@@ -927,20 +932,19 @@ b {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
     width: 100%;
-    height: 208px;
-    gap: 10px;
+    gap: 47px;
+    padding: 74px 0;
 }
 
 .sponsors a {
-    width: 20%;
-    max-width: 190px;
+    width: 190px;
 }
 
 .sponsors img {
     width: 100%;
-    /* width: 190px; */
     filter: grayscale(100%);
     transition: 0.5s ease-in-out;
     opacity: 0.4;
@@ -1167,7 +1171,7 @@ b {
     top: 20px;
     width: 40px;
     height: 40px;
-    background: rgba(255, 255, 255, 0.8);
+    background: #fff;
     border-radius: 10px;
     box-shadow: 0 25px 35px rgba(0, 0, 0, 0.2);
     justify-content: end;
@@ -1178,11 +1182,12 @@ b {
     width: auto;
     height: auto;
     transform: translateX(0);
-    left: 20px;
-    bottom: 20px;
-    top: 20px;
-    right: 20px;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    right: 0;
     z-index: 10;
+    padding: 20px;
 }
 
 .folderContainer.active~.sign
@@ -1190,25 +1195,33 @@ b {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 30px;
+    justify-content: space-between;
+    gap: 0 !important;
     right: 50%;
-    top: 50px;
+    top: 5vh;
+    height: 15vh;
     z-index: 10;
-    transform: translateX(50%) scale(1.5);
+    transform: translateX(50%) scale(1.2);
 }
 
 .folderContainer.active~.navigation_header
 {
     display: flex;
     flex-direction: column;
-    top: 200px;
+    justify-content: space-between;
+    top: 30vh;
+    height: 60vh;
     z-index: 10;
-    gap: 10px;
+    /* gap: 10px; */
 }
 
 .folderContainer.active~.navigation_header li a {
-    font-size: 46px;
+    font-size: 4vh;
     line-height: 120%;
+}
+
+.folderContainer.active~.navigation_header li:not(:last-child) {
+    /* border-bottom: 2px solid #4F5665; */
 }
 
 .folderContainer .menuToggle
